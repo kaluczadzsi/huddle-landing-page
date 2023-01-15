@@ -59,6 +59,7 @@ main {
     margin-bottom: 3.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: background 0.2s;
+    cursor: pointer;
 
     a {
       text-decoration: none;
@@ -119,7 +120,7 @@ footer {
       }
 
       button {
-        width: 25%;
+        width: 35%;
         margin: 0;
       }
     }
