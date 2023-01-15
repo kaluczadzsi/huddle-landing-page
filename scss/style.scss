@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  padding:0 2rem;
+  padding: 0 2rem;
   margin: 0 auto;
   height: 100vh;
   font-family: $ff-open-sans;
@@ -28,10 +28,9 @@ header {
 }
 
 main {
-
   .content {
     display: grid;
-    gap:3rem
+    gap: 3rem;
   }
 
   h1 {
@@ -41,18 +40,17 @@ main {
   .main-text {
     display: flex;
     flex-direction: column;
-    gap:1.3rem;
+    gap: 1.3rem;
 
-  }
-
-  p {
-    font-size: 1.02rem;
+    p {
+      font-size: 1.02rem;
+    }
   }
 
   button {
     display: inline-block;
     border-radius: 100px;
-    border:none;
+    border: none;
     background-color: #fff;
     color: $clr-violet;
     padding: 0.5rem 1rem;
@@ -72,10 +70,98 @@ main {
       background-color: $clr-magenta;
 
       a {
-        color: #fff;
+        @extend %clr-white;
       }
-      
     }
   }
 }
 
+footer {
+  .social {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    i {
+      @extend %clr-white;
+      border: 1px solid #fff;
+      padding: 7px;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+
+      &:hover {
+        color: $clr-magenta;
+        border-color: $clr-magenta;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+
+    .main-text {
+      height: 100%;
+      align-self: flex-start;
+      // justify-content: center;
+      text-align: left;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      button {
+        width: 25%;
+        margin: 0;
+      }
+    }
+  }
+
+  footer {
+    .social {
+      margin-top: 2rem;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  header {
+    .logo {
+      width: 10rem;
+    }
+  }
+
+  main {
+    .content {
+      .main-text {
+        h1 {
+          font-size: 3.6rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+
+        button {
+          width: 25%;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    .social {
+      padding-bottom: 0;
+    }
+  }
+}
