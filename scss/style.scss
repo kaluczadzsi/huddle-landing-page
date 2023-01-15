@@ -2,5 +2,23 @@
 @import 'reset';
 
 body {
-  background-color: $clr-magenta;
+  background: $clr-violet url('../images/bg-mobile.svg') no-repeat top center;
 }
+
+.container {
+  padding:0 2rem;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+
+  .logo {
+    width: 8rem;
+  }
+}
+
+
+
