@@ -41,11 +41,11 @@ img {
 }
 
 .flex > div:first-child {
-  flex: 0.6;
+  flex: 1;
 }
 
 .flex > div:last-child {
-  flex: 0.4;
+  flex: 1;
 }
 
 button {
